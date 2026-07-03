@@ -1,0 +1,34 @@
+@import './../styles/fontSizes.css';
+@import './../styles/colors.css';
+@import './../styles/fonts.css';
+
+.header {
+    padding: 28px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.img__wrap {
+    width: 80px;
+    height: 80px;
+}
+
+.logo {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+.nav {
+    display: flex;
+    column-gap: 50px;
+}
+
+a {
+    text-decoration: none;
+    font-size: var(--text-m);
+    font-family: var(--font-outfit);
+    color: var(--text-primary);
+}

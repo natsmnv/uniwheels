@@ -1,0 +1,13 @@
+@import './../../styles/fontSizes.css';
+@import './../../styles/colors.css';
+@import './../../styles/fonts.css';
+
+button {
+    padding: 12px 19px;
+    background-color: var(--accent);
+    font-family: var(--font-outfit);
+    font-size: var(--text-m);
+    color: var(--background-secondary);
+    border: none;
+    border-radius: 32px;
+}

@@ -1,0 +1,7 @@
+:root {
+    --text-s: clamp(0.8rem, 0.78rem + 0.1vw, 0.9rem);
+    --text-m: clamp(1rem, 0.8rem + 0.25vw, 1.125rem);
+    --text-l: clamp(2rem, 1rem + 1.2vw, 2.441rem);
+    --text-xl: clamp(2.441rem, 2rem + 1.8vw, 3.052rem);
+    --text-2xl: clamp(3.052rem, 2.441rem + 3vw, 3.815rem);
+}
