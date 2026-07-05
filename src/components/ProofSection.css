@@ -1,0 +1,53 @@
+@import './../styles/colors.css';
+@import './../styles/fonts.css';
+@import './../styles/fontSizes.css';
+@import './../styles/spacing.css';
+
+.proof-section {
+  background-color: var(--background-secondary);
+  padding: 48px 40px;
+  margin: 0 var(--padding) 48px;
+}
+
+@media (max-width: 768px) {
+  .proof-section {
+    padding: 40px 20px;
+    margin: 0 16px 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .proof-section {
+    padding: 32px 16px;
+    margin: 0 0 32px;
+  }
+}
+
+.proof-section h2 {
+  text-align: center;
+  font-family: var(--font-outfit);
+  font-size: var(--text-l);
+  font-weight: 400;
+  color: var(--text-primary);
+  margin: 0 0 40px;
+}
+
+@media (max-width: 768px) {
+  .proof-section h2 {
+    margin: 0 0 28px;
+  }
+}
+
+.proof-content {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+@media (max-width: 768px) {
+  .proof-content {
+    flex-direction: column;
+    gap: 28px;
+  }
+}
