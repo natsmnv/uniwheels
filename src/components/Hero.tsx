@@ -1,15 +1,27 @@
-import './hero.css';
-import heroLogo from './../assets/hero_biking.webp'
-import Button from './button/Button';
+import "./hero.css";
+import heroLogo from "./../assets/hero_biking.webp";
+import Button from "./button/Button";
 
 export default function Hero() {
-    return(
-        <div className='hero'>
-            <h1 className='heroTitle'>SHARE THE MOMENT</h1>
-            <p className='heroDesc'> Join bike trips with people who share your route or interests. Discover the <br /> 
-                joy of cycling in a safe and welcoming community.</p>
-            <div className='heroButton'><Button/></div>
-            <img className='heroImg' src={heroLogo}/>
+    return (
+        <div className="hero">
+            <h1 className="heroTitle">SHARE THE MOMENT</h1>
+
+            <p className="heroDesc">
+                Join bike trips with people who share your route or interests.
+                Discover the <br />
+                joy of cycling in a safe and welcoming community.
+            </p>
+
+            <div className="heroButton">
+                <Button />
+            </div>
+
+            <img
+                className="heroImg"
+                src={heroLogo}
+                alt="People cycling together"
+            />
         </div>
-    )
+    );
 }

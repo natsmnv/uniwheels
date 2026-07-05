@@ -1,34 +1,72 @@
-@import './../styles/fontSizes.css';
-@import './../styles/colors.css';
-@import './../styles/fonts.css';
-
+@import "./../styles/fontSizes.css";
+@import "./../styles/colors.css";
+@import "./../styles/fonts.css";
 
 .hero {
-    display: grid;
-    grid-template-areas: "heroTitle heroDesc heroButton";
-    grid-template-areas: "heroImg";
-}
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "heroTitle heroImg"
+    "heroDesc heroImg"
+    "heroButton heroImg";
 
-.heroImg {
-    width: 25%;
-    height: auto;
-    margin-left: 70%;
-    margin-top: -15%
+  align-items: center;
+  gap: 20px;
+  padding: 50px 5%;
 }
-
 
 .heroTitle {
-    font-size: var(--text-2xl);
-    font-family: var(--font-outfit);
-    margin-left: 5%;
+  grid-area: heroTitle;
+  font-size: var(--text-2xl);
+  font-family: var(--font-outfit);
+  margin: 0;
 }
 
 .heroDesc {
-    font-size: var(--text-m);
-    font-family: var(--font-outfit);
-    margin-left: 5%;
+  grid-area: heroDesc;
+  font-size: var(--text-m);
+  font-family: var(--font-outfit);
+  margin: 0;
 }
 
 .heroButton {
-    margin-left: 5%;
+  grid-area: heroButton;
+}
+
+.heroImg {
+  grid-area: heroImg;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  justify-self: center;
+}
+
+@media only screen and (max-width: 850px) {
+  .hero {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "heroTitle"
+      "heroImg"
+      "heroDesc"
+      "heroButton";
+
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .heroTitle,
+  .heroDesc,
+  .heroButton {
+    margin: 0;
+  }
+
+  .heroImg {
+    width: 80%;
+    max-width: 350px;
+    justify-self: center;
+  }
+
+  .heroDesc br {
+    display: none;
+  }
 }
