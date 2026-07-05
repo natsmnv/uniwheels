@@ -3,29 +3,37 @@
 @import "./../styles/fonts.css";
 
 .problem {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .problemMainTitle {
-    font-size: var(--text-l);
-    font-family: var(--font-outfit);
+  font-size: var(--text-l);
+  font-family: var(--font-outfit);
+  text-align: center;
 }
 
+.problemMainDsc {
+  font-size: var(--text-m);
+  font-family: var(--font-outfit);
+  margin-left: 5%;
+}
+
+/* Boxes row layout */
 .problemBoxes {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .problemBox {
-    margin-left: 10vh;
-    width: 16rem;
-    height: 17rem;
-    border-radius: 25px;
-    background-color: var(--background-primary);
-    display: inline-block;
+  margin-left: 10vh;
+  width: 16rem;
+  height: 17rem;
+  border-radius: 25px;
+  background-color: var(--background-primary);
+  display: inline-block;
 }
 
 .problemImg {
@@ -44,4 +52,29 @@
   font-size: var(--text-m);
   font-family: var(--font-outfit);
   margin-left: 5%;
+}
+
+/* Mobile */
+@media only screen and (max-width: 850px) {
+  .problemBoxes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .problemMainTitle,
+  .problemMainDsc {
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .problem {
+    align-items: center;
+    text-align: center;
+  }
+
+  .problemBox {
+    margin-left: 0;
+    margin-top: 5%;
+  }
 }

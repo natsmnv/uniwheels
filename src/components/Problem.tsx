@@ -9,7 +9,7 @@ export default function Problem() {
     return (
         <div className='problem'>
             <p className="problemMainTitle">Why People Don’t Cycle More</p>
-            <p className="problemDsc">Many people would like to cycle more often, but common concerns hold them back.</p>
+            <p className="problemMainDsc">Many people would like to cycle more often, but common concerns hold them back.</p>
             <div className='problemBoxes'>
                 <div className='problemBox'>
                     <img className="problemImg" src={shield} alt="Security shield"/>
