@@ -3,6 +3,7 @@ import Header from './components/Header'
 import Hero from './components/Hero'
 import ProofSection from "./components/ProofSection";
 import RepeatCTA from "./components/RepeatCTA";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Hero/>
       <ProofSection />
       <RepeatCTA />
+      <Footer />
     </>
   );
 }
