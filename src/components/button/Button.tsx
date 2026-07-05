@@ -7,9 +7,7 @@ export default function Button() {
 
     return (
         <>
-            <button onClick={handleClick}>
-                Start Now
-            </button>
+            <button onClick={handleClick}> Start Now </button>
         </>
     );
 }
