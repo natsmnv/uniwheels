@@ -1,5 +1,6 @@
 import Button from "./button/Button";
 import iphoneMockup from "./../assets/iphone-mockup.png";
+import "./RepeatCTA.css";
 
 const RepeatCTA = () => {
   return (
