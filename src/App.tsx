@@ -5,6 +5,7 @@ import ProofSection from "./components/ProofSection";
 import RepeatCTA from "./components/RepeatCTA";
 import Footer from "./components/Footer";
 import Problem from './components/Problem'
+import Solution from './components/Solution';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Header/>
       <Hero/>
       <Problem/>
+      <Solution />
       <ProofSection />
       <RepeatCTA />
       <Footer />
