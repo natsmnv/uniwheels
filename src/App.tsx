@@ -1,13 +1,12 @@
-import './App.css'
-import Header from './components/Header'
+import "./App.css";
+import ProofSection from "./components/ProofSection";
 
 function App() {
-
   return (
     <>
-      <Header/>
+      <ProofSection />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
