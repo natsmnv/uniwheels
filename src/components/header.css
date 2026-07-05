@@ -2,6 +2,12 @@
 @import './../styles/colors.css';
 @import './../styles/fonts.css';
 
+/* ── Wrapper ─────────────────────────────────────── */
+.header-wrapper {
+    position: relative;
+}
+
+/* ── Header bar ──────────────────────────────────── */
 .header {
     padding: 28px 50px;
     display: flex;
@@ -9,6 +15,7 @@
     align-items: center;
 }
 
+/* ── Logo ────────────────────────────────────────── */
 .img__wrap {
     width: 80px;
     height: 80px;
@@ -21,6 +28,7 @@
     object-fit: cover;
 }
 
+/* ── Desktop nav ─────────────────────────────────── */
 .nav {
     display: flex;
     column-gap: 50px;
@@ -31,4 +39,110 @@ a {
     font-size: var(--text-m);
     font-family: var(--font-outfit);
     color: var(--text-primary);
+}
+
+/* ── Burger button (hidden on desktop) ───────────── */
+.burger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    width: 32px;
+    height: 32px;
+}
+
+.burger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: var(--text-primary);
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform-origin: center;
+}
+
+/* Animate to × when open */
+.burger--open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+.burger--open span:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+.burger--open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ── Mobile slide-down menu ──────────────────────── */
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, padding 0.35s ease;
+    background-color: var(--background-primary, #fff);
+}
+
+.mobile-menu--open {
+    max-height: 400px;
+    padding: 20px 20px 28px;
+}
+
+.mobile-menu a {
+    font-size: var(--text-m);
+    font-family: var(--font-outfit);
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+/* ── Tablet: tighten spacing ─────────────────────── */
+@media (max-width: 900px) {
+    .header {
+        padding: 20px 30px;
+    }
+
+    .nav {
+        column-gap: 28px;
+    }
+
+    .img__wrap {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/* ── Mobile: show burger, hide nav + desktop button ─ */
+@media (max-width: 600px) {
+    .header {
+        padding: 16px 20px;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    /* Hide the desktop CTA button inside the header bar */
+    .header > button:not(.burger) {
+        display: none;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    .img__wrap {
+        width: 48px;
+        height: 48px;
+    }
+
+    .mobile-menu {
+        display: flex;
+    }
 }
