@@ -20,7 +20,6 @@
   margin-left: 5%;
 }
 
-/* Boxes row layout */
 .problemBoxes {
   display: flex;
   flex-direction: row;
@@ -32,7 +31,7 @@
   width: 16rem;
   height: 17rem;
   border-radius: 25px;
-  background-color: var(--background-primary);
+  background-color: var(--background-secondary);
   display: inline-block;
 }
 
@@ -54,7 +53,6 @@
   margin-left: 5%;
 }
 
-/* Mobile */
 @media only screen and (max-width: 850px) {
   .problemBoxes {
     display: flex;
