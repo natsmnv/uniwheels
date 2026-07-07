@@ -1,9 +1,9 @@
 import "./solution.css";
-import phone from "./../assets/phone_front.png";
+import phone from "./../assets/phone_solution.png";
 
 export default function Solution() {
     return (
-        <section className="solution">
+        <section className="solution" id="how-it-works">
             <p className="solutionMainTitle">Turn Solo Rides into Shared Experiences</p>
 
             <div className="solutionContent">
@@ -20,7 +20,7 @@ export default function Solution() {
                 </div>
 
                 <div className="solutionPhone">
-                    <img src={phone} alt="Phone showing available rides" />
+                    <img src={phone} width="327px" height="567px" alt="Phone showing available rides" />
                 </div>
 
                 <div className="solutionColumn right">

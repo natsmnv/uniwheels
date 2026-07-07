@@ -6,13 +6,15 @@
 .proof-section {
   background-color: var(--background-secondary);
   padding: 48px 40px;
-  margin: 0 var(--padding) 48px;
+  margin: 0 0 48px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 @media (max-width: 768px) {
   .proof-section {
     padding: 40px 20px;
-    margin: 0 16px 40px;
+    margin: 0 0 40px;
   }
 }
 

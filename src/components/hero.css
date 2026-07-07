@@ -4,15 +4,16 @@
 
 .hero {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 420px) minmax(0, 500px);
   grid-template-areas:
     "heroTitle heroImg"
     "heroDesc heroImg"
     "heroButton heroImg";
 
   align-items: center;
-  gap: 20px;
-  padding: 50px 5%;
+  justify-content: center;
+  column-gap: 32px;
+  padding: 120px 80px;
 }
 
 .heroTitle {
@@ -20,6 +21,7 @@
   font-size: var(--text-2xl);
   font-family: var(--font-outfit);
   margin: 0;
+  max-width: 420px;
 }
 
 .heroDesc {
@@ -27,16 +29,18 @@
   font-size: var(--text-m);
   font-family: var(--font-outfit);
   margin: 0;
+  max-width: 420px;
 }
 
 .heroButton {
   grid-area: heroButton;
+  max-width: 420px;
 }
 
 .heroImg {
   grid-area: heroImg;
   width: 100%;
-  max-width: 500px;
+  max-width: 460px;
   height: auto;
   justify-self: center;
 }
@@ -51,7 +55,10 @@
       "heroButton";
 
     text-align: center;
-    padding: 30px 20px;
+    justify-items: center;
+    align-content: center;
+    gap: 12px;
+    min-height: calc(100svh - 110px);
   }
 
   .heroTitle,
@@ -61,7 +68,7 @@
   }
 
   .heroImg {
-    width: 80%;
+    width: min(80%, 320px);
     max-width: 350px;
     justify-self: center;
   }
