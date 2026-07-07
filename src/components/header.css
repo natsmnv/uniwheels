@@ -12,6 +12,7 @@
     inset-inline: 0;
     width: 100%;
     box-sizing: border-box;
+    z-index: 100;
 }
 
 .img__wrap {

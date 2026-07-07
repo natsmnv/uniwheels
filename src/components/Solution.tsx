@@ -1,5 +1,5 @@
 import "./solution.css";
-import phone from "./../assets/phone_front.png";
+import phone from "./../assets/phone_solution.png";
 
 export default function Solution() {
     return (
@@ -20,7 +20,7 @@ export default function Solution() {
                 </div>
 
                 <div className="solutionPhone">
-                    <img src={phone} alt="Phone showing available rides" />
+                    <img src={phone} width="327px" height="567px" alt="Phone showing available rides" />
                 </div>
 
                 <div className="solutionColumn right">

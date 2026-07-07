@@ -44,6 +44,8 @@
 .problemImg {
   margin-top: 15%;
   margin-left: 5%;
+  width: 33px;
+  height: 33px;
 }
 
 .problemTitle {
