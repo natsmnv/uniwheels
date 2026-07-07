@@ -2,15 +2,16 @@
 @import './../styles/colors.css';
 @import './../styles/fonts.css';
 
-.header-wrapper {
-    position: relative;
-}
-
 .header {
-    padding: 28px 50px;
+    padding: 0 50px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    background-color: var(--background-primary);
+    inset-inline: 0;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .img__wrap {
@@ -25,7 +26,13 @@
     object-fit: cover;
 }
 
-.nav {
+.wrap {
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+}
+
+.links {
     display: flex;
     column-gap: 50px;
 }
@@ -37,94 +44,68 @@ a {
     color: var(--text-primary);
 }
 
+.menuToggle {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
 .burger {
     display: none;
     flex-direction: column;
     justify-content: center;
     gap: 5px;
-    background: none;
-    border: none;
+    width: 44px;
+    height: 44px;
     cursor: pointer;
-    padding: 4px;
-    width: 32px;
-    height: 32px;
+    padding: 0;
+    border: 0;
+    background: transparent;
 }
 
 .burger span {
     display: block;
     width: 24px;
     height: 2px;
+    border-radius: 999px;
     background-color: var(--accent);
-    border-radius: 2px;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    transition: transform 0.25s ease, opacity 0.25s ease;
     transform-origin: center;
 }
 
-.burger--open span:nth-child(1) {
-    transform: translateY(7px) rotate(45deg);
-}
-.burger--open span:nth-child(2) {
-    opacity: 0;
-    transform: scaleX(0);
-}
-.burger--open span:nth-child(3) {
-    transform: translateY(-7px) rotate(-45deg);
-}
-
-.mobile-menu {
-    display: none;
+.mobileMenu {
+    position: absolute;
+    top: 100%;
+    right: 50px;
+    display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 24px;
-    padding: 0 20px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.35s ease, padding 0.35s ease;
-    background-color: var(--background-primary, #fff);
+    align-items: stretch;
+    gap: 20px;
+    padding: 18px 20px 20px;
+    background: var(--background-secondary, #fff);
+    border-radius: 20px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    pointer-events: none;
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+    z-index: 10;
 }
 
-.mobile-menu--open {
-    max-height: 400px;
-    padding: 20px 20px 28px;
+.mobileMenu__links {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
 }
 
-.mobile-menu a {
-    font-size: var(--text-m);
-    font-family: var(--font-outfit);
-    color: var(--text-primary);
-    text-decoration: none;
+.mobileMenu__button {
+    width: 100%;
 }
 
-@media (max-width: 900px) {
-    .header {
-        padding: 20px 30px;
-    }
-
-    .nav {
-        column-gap: 28px;
-    }
-
-    .img__wrap {
-        width: 60px;
-        height: 60px;
-    }
-}
-
-@media (max-width: 600px) {
+@media all and (max-width: 768px) {
     .header {
         padding: 16px 20px;
-    }
-
-    .nav {
-        display: none;
-    }
-
-    .header > button:not(.burger) {
-        display: none;
-    }
-
-    .burger {
-        display: flex;
     }
 
     .img__wrap {
@@ -132,7 +113,36 @@ a {
         height: 48px;
     }
 
-    .mobile-menu {
+    .wrap {
+        display: none;
+    }
+
+    .burger {
         display: flex;
+        margin-left: auto;
+    }
+
+    .menuToggle:checked ~ .mobileMenu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+
+    .menuToggle:checked + .burger span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .menuToggle:checked + .burger span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menuToggle:checked + .burger span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    .mobileMenu {
+        right: 20px;
+        left: 20px;
     }
 }

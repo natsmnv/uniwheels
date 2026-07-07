@@ -7,7 +7,7 @@ import authenticity from './../assets/authenticity.png';
 
 export default function Problem() {
     return (
-        <div className='problem'>
+        <div className='problem' id='why-cycle'>
             <p className="problemMainTitle">Why People Don’t Cycle More</p>
             <p className="problemMainDsc">Many people would like to cycle more often, but common concerns hold them back.</p>
             <div className='problemBoxes'>

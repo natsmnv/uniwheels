@@ -3,7 +3,7 @@ import phone from "./../assets/phone_front.png";
 
 export default function Solution() {
     return (
-        <section className="solution">
+        <section className="solution" id="how-it-works">
             <p className="solutionMainTitle">Turn Solo Rides into Shared Experiences</p>
 
             <div className="solutionContent">
