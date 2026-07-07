@@ -1,11 +1,14 @@
 import logo from './../assets/Logo-2.png';
 import Button from './button/Button';
 import './header.css';
+import { useNavigate } from 'react-router-dom';
 
 export default function Header() {
+    const navigate = useNavigate();
+
     return (
         <header className="header">
-            <div className="img__wrap">
+            <div className="img__wrap" onClick={() => navigate("/")}>
                 <img src={logo} alt="logo" className='logo' width="80" height="80" />
             </div>
             <input id="mobile-menu-toggle" className="menuToggle" type="checkbox" />
