@@ -14,6 +14,7 @@
   justify-content: center;
   column-gap: 32px;
   padding: 120px 80px;
+  scroll-margin-top: 104px;
 }
 
 .heroTitle {
@@ -22,6 +23,7 @@
   font-family: var(--font-outfit);
   margin: 0;
   max-width: 420px;
+  text-wrap: balance;
 }
 
 .heroDesc {
@@ -30,6 +32,7 @@
   font-family: var(--font-outfit);
   margin: 0;
   max-width: 420px;
+  text-wrap: pretty;
 }
 
 .heroButton {

@@ -10,4 +10,11 @@ button {
     color: var(--background-secondary);
     border: none;
     border-radius: 32px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+button:hover {
+    cursor: pointer;
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 8px 20px rgba(255, 118, 23, 0.3);
 }

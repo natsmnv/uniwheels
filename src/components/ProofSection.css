@@ -9,6 +9,7 @@
   margin: 0 0 48px;
   width: 100%;
   box-sizing: border-box;
+  scroll-margin-top: 104px;
 }
 
 @media (max-width: 768px) {

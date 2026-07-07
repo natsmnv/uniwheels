@@ -1,8 +1,9 @@
 :root {
-    --background-primary: #F7F2F0;
-    --background-secondary: #FFFFFF;
-    --accent: #FF7617;
-    --text-primary: #000000;
-    --text-secondary: #282D33;
-    --text-third: #6F7378;
+    color-scheme: light dark;
+    --background-primary: light-dark(#F7F2F0, #6F7378);
+    --background-secondary: light-dark(#FFFFFF, #282D33);
+    --accent: light-dark(#FF7617, #FF7617);
+    --text-primary: light-dark(#000000, #F7F2F0);
+    --text-secondary: light-dark(#282D33, #E5DFDC);
+    --text-third: light-dark(#6F7378, #C4BCB7);
 }
