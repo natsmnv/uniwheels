@@ -1,16 +1,14 @@
 import logo from './../assets/Logo-2.png';
 import Button from './button/Button';
 import './header.css';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default function Header() {
-    const navigate = useNavigate();
-
     return (
         <header className="header">
-            <div className="img__wrap" onClick={() => navigate("/")}>
-                <img src={logo} alt="logo" className='logo' width="80" height="80" />
-            </div>
+            <Link className="img__wrap" to="/" aria-label="Go to homepage">
+                <img src={logo} alt="Uni Wheels logo" className='logo' width="80" height="80" />
+            </Link>
             <input id="mobile-menu-toggle" className="menuToggle" type="checkbox" />
             <label className="burger" htmlFor="mobile-menu-toggle" aria-label="Toggle menu">
                 <span />

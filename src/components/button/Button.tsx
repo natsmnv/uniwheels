@@ -1,13 +1,21 @@
 import './button.css';
 
-export default function Button({className=""}) {
-    const handleClick = () => {
-        window.location.href = "https://fh-uni-wheels.projects.ct.fh-salzburg.ac.at";
-    };
+interface ButtonProps {
+    className?: string;
+    href?: string;
+    label?: string;
+}
+
+export default function Button({
+    className = "",
+    href = "https://fh-uni-wheels.projects.ct.fh-salzburg.ac.at",
+    label = "Start Now",
+}: ButtonProps) {
+    const buttonClassName = ["cta-button", className].filter(Boolean).join(" ");
 
     return (
-        <>
-            <button className={className} onClick={handleClick}> Start Now </button>
-        </>
+        <a className={buttonClassName} href={href}>
+            {label}
+        </a>
     );
 }

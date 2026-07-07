@@ -2,19 +2,30 @@
 @import './../../styles/colors.css';
 @import './../../styles/fonts.css';
 
-button {
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     padding: 12px 19px;
     background-color: var(--accent);
     font-family: var(--font-outfit);
     font-size: var(--text-m);
-    color: var(--background-secondary);
-    border: none;
+    font-weight: 700;
+    color: var(--text-primary);
+    border: 1px solid color-mix(in srgb, var(--text-primary) 14%, transparent);
     border-radius: 32px;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
 }
 
-button:hover {
+.cta-button:hover {
     cursor: pointer;
     transform: translateY(-2px) scale(1.03);
     box-shadow: 0 8px 20px rgba(255, 118, 23, 0.3);
+}
+
+.cta-button:focus-visible {
+    outline: 3px solid var(--text-primary);
+    outline-offset: 3px;
 }

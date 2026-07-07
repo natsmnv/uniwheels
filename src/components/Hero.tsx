@@ -4,7 +4,7 @@ import Button from "./button/Button";
 
 export default function Hero() {
     return (
-        <div className="hero">
+        <section className="hero">
             <h1 className="heroTitle">SHARE THE MOMENT</h1>
 
             <p className="heroDesc">
@@ -23,6 +23,6 @@ export default function Hero() {
                 width="386px"
                 height="281px"
             />
-        </div>
+        </section>
     );
 }

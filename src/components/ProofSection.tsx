@@ -24,7 +24,7 @@ const testimonials = [
 
 const ProofSection = () => {
   return (
-    <div className="proof-section" id="testimonials">
+    <section className="proof-section" id="testimonials">
       <h2>What Cyclists Say</h2>
       <div className="proof-content">
         {testimonials.map((testimonial, index) => (
@@ -36,7 +36,7 @@ const ProofSection = () => {
           />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 
