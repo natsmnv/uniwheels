@@ -9,8 +9,8 @@ const RepeatCTA = () => {
         src={iphoneMockup}
         alt="Uni Wheels app showing the New Ride screen on an iPhone"
         className="repeat-cta__image"
-        width={280}
-        height={320}
+        width={516}
+        height={289}
       />
       <div className="repeat-cta__content">
         <h2 id="repeat-cta-heading">Ready to Ride Together?</h2>
