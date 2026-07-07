@@ -8,12 +8,15 @@
   align-items: center;
   padding: 0 80px;
   box-sizing: border-box;
+  scroll-margin-top: 104px;
 }
 
 .problemMainTitle {
   font-size: var(--text-l);
   font-family: var(--font-outfit);
   text-align: center;
+  margin: 0 0 12px;
+  text-wrap: balance;
 }
 
 .problemMainDsc {

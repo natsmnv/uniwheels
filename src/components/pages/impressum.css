@@ -1,0 +1,28 @@
+@import "./../../styles/fontSizes.css";
+@import "./../../styles/colors.css";
+@import "./../../styles/fonts.css";
+
+.impressum {
+    padding: 120px 80px;
+}
+
+h1 {
+    font-size: var(--text-l);
+    font-family: var(--font-outfit);
+}
+
+h2 {
+    font-size: var(--text-m);
+    font-family: var(--font-outfit);
+}
+
+p, li {
+    font-size: var(--text-s);
+    font-family: var(--font-outfit);
+}
+
+@media all and (max-width: 768px) {
+    .impressum {
+        padding: 50px 16px;
+    }
+}

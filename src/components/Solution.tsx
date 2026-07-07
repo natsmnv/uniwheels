@@ -4,7 +4,7 @@ import phone from "./../assets/phone_solution.png";
 export default function Solution() {
     return (
         <section className="solution" id="how-it-works">
-            <p className="solutionMainTitle">Turn Solo Rides into Shared Experiences</p>
+            <h2 className="solutionMainTitle">Turn Solo Rides into Shared Experiences</h2>
 
             <div className="solutionContent">
                 <div className="solutionColumn left">
