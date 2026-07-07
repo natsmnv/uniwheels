@@ -9,8 +9,7 @@ export default function Hero() {
 
             <p className="heroDesc">
                 Join bike trips with people who share your route or interests.
-                Discover the <br />
-                joy of cycling in a safe and welcoming community.
+                Discover the joy of cycling in a safe and welcoming community.
             </p>
 
             <div className="heroButton">
@@ -21,6 +20,8 @@ export default function Hero() {
                 className="heroImg"
                 src={heroLogo}
                 alt="People cycling together"
+                width="386px"
+                height="281px"
             />
         </div>
     );

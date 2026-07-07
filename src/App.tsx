@@ -11,11 +11,13 @@ function App() {
   return (
     <>
       <Header/>
-      <Hero/>
-      <Problem/>
-      <Solution />
-      <ProofSection />
-      <RepeatCTA />
+      <main>
+        <Hero/>
+        <Problem/>
+        <Solution />
+        <ProofSection />
+        <RepeatCTA />
+      </main>
       <Footer />
     </>
   );
