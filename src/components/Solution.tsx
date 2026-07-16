@@ -1,5 +1,5 @@
 import "./solution.css";
-import phone from "./../assets/phone_solution.png";
+import phone from "./../assets/phone_solution.webp";
 
 export default function Solution() {
     return (

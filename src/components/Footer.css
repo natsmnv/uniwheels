@@ -27,7 +27,7 @@
 .footer__nav a {
   font-family: var(--font-outfit);
   font-size: var(--text-s);
-  color: var(--text-third);
+  color: var(--text-secondary);
   text-decoration: none;
   transition: color 0.2s ease;
 }
