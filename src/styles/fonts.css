@@ -1,5 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
+@font-face {
+    font-family: "Outfit";
+    src: url("./../assets/fonts/Outfit-Regular.ttf");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Outfit";
+    src: url("./../assets/fonts/Outfit-Bold.ttf");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
 :root {
     --font-outfit: "Outfit", sans-serif;
 }

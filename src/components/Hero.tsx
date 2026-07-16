@@ -20,8 +20,11 @@ export default function Hero() {
                 className="heroImg"
                 src={heroLogo}
                 alt="People cycling together"
-                width="386px"
-                height="281px"
+                width={361}
+                height={251}
+                loading="eager"
+                fetchPriority="high"
+                decoding="async"
             />
         </section>
     );

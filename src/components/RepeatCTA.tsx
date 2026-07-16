@@ -1,5 +1,5 @@
 import Button from "./button/Button";
-import iphoneMockup from "./../assets/iphone-mockup.png";
+import iphoneMockup from "./../assets/iphone-mockup.webp";
 import "./RepeatCTA.css";
 
 const RepeatCTA = () => {
@@ -11,6 +11,8 @@ const RepeatCTA = () => {
         className="repeat-cta__image"
         width={516}
         height={289}
+        loading="lazy"
+        decoding="async"
       />
       <div className="repeat-cta__content">
         <h2 id="repeat-cta-heading">Ready to Ride Together?</h2>
